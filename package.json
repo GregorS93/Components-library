@@ -1,6 +1,6 @@
 {
-  "name": "my-components-library",
-  "description": "https://scrimba.com/frontend-path-c0j/~011n/s0rhpf0kt4/head",
+  "name": "components-library",
+  "description": "A library of some popular components used in React development.",
   "scripts": {
     "start": "vite",
     "dev": "vite",
