@@ -1,0 +1,175 @@
+.testimonial {
+    background-color: #FFF;
+    width: 80%;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3em;
+}
+
+.testimonial > p {
+    color: #111827;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    width: 90%;
+}
+
+.signature {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 0.3em;
+    margin: 1.3em 0 5em 1.3em;
+}
+
+.logo {
+    margin: 4em 0 2em 0;
+}
+
+.span {
+    display: none;
+}
+
+.withPicture {
+    background: linear-gradient(to bottom, white 20%, #2545B8 20%);
+    color: white;
+    width: 80%;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3em;
+}
+
+/* With cropped picture styles */
+
+.p-picture {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    width: 90%;
+    margin-left: 1em;
+}
+
+.portrait {
+    display: none;
+}
+
+.portrait-cropped {
+    padding-top: 0.3em;
+    width: 100%;
+}
+
+.narekovaj {
+    align-self: flex-start;
+    margin: 1em 0 1em 1.5em;
+}
+
+.span-picture {
+    display: none;
+}
+
+.signature-picture {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    gap: 5px;
+}
+
+/* Media queries */
+
+@media (min-width: 768px) {
+    .testimonial {
+        width: 90%;  
+        padding: 4em;
+        text-align: center; 
+    }
+    
+    .testimonial > p {
+        font-size: 1.6rem;
+    }
+    
+    .signature {
+        align-self: center;
+        flex-direction: row;
+        gap: 0.7em;
+        margin-top: .5em;
+    }
+    
+    .span {
+        color: #2E59F3;
+        font-weight: bold;
+        display: block;
+    }
+    
+    /* With big picture styles */
+    
+    .portrait-cropped {
+        display: none;
+    }
+    
+    .portrait {
+        display: block;
+    }
+    
+    .withPicture {
+        width: 90%
+    }
+}    
+
+@media (min-width: 1025px) {
+    
+    /* Big picture only */
+    
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .withPicture {
+        width: 100%;
+        height: 400px;
+        background: #2545B8;
+        flex-direction: row;
+        margin-bottom: 2em;
+        margin-top: 4em;
+    }
+    
+    .float-div > p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+    
+    .portrait {
+        margin-left: 4em;
+        position: relative;
+        top: 18px;
+    }
+    
+    .float-div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2em;
+        width: 50%;
+        position: relative;
+        top: 30px;
+    }
+    
+    .signature-picture {
+        margin: 0;
+        padding-top: 1em;
+        gap: 5px;
+    }
+    
+    .narekovaj {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+    
+    .name-div {
+        font-weight: bold;
+    }
+    
+}

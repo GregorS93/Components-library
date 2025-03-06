@@ -1,0 +1,62 @@
+.polygon {
+    position: absolute;
+    left: 80px;
+    top: 107px;
+    font-size: 40px;
+}
+
+.polygon-light {
+    color: #E0E7FF;
+}
+
+.polygon-dark {
+    color: #1E40AF;
+}
+
+.tooltip {
+    position: relative;
+    color: #C7C7C7;
+    width: 450px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    gap: 25px;
+    padding: 1.5em;
+}
+
+.tooltip-dark {
+    background: #1E40AF;
+}
+
+.tooltip-light {
+    background: #E0E7FF;
+    color: #1C51B9;
+}
+
+.close-btn {
+    border: none;
+    align-self: flex-start;
+    padding: 0;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.close-btn-dark {
+    background: #1E40AF;
+    color: white;
+}
+
+.close-btn-light {
+    color: #1C51B9;
+}
+
+.content-div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px    
+}
+
+.header {
+    font-weight: bold;
+}

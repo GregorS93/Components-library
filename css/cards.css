@@ -1,0 +1,51 @@
+.first-icon {
+    height: 50px;
+    width: 20px;
+    color: #FFFFFF;
+    stroke-width: 0.5; 
+}
+
+.card {
+    height: 210px;
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card > p {
+    width: 80%;
+    color: #6B7280;
+}
+
+.card > h3 {
+    font-weight: 600;
+    color: #111827;
+}
+
+.card-background {
+    background-color: #EFEFEF;
+    height: 340px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.color-picker-label {
+    margin: 10px 0;
+    font-size: 11px;
+}
+
+.color-picker {
+    height: 10px;
+}
