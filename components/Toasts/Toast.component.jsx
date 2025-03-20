@@ -1,6 +1,4 @@
-import React from "react";
 import ReactDOM from "react-dom";
-import Toasts from "./Toasts-Component";
 import clsx from "clsx";
 
 export default function Toast({ title, text, status, icons }) {

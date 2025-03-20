@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Toast from "./Toast-Component";
+import Toast from "./Toast.component";
 
 export default function Toasts() {
   const [showToast, setShowToast] = useState(false);

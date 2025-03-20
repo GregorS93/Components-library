@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Icon from "./Icon-Component";
+import Icon from "./Icon.component";
 import { IoCloudUploadOutline } from "react-icons/io5";
 
 export default function Card() {

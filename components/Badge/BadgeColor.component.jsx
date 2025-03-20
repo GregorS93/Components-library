@@ -1,5 +1,3 @@
-import React from "react";
-import Badge from "./Badge-Component";
 import clsx from "clsx";
 
 export default function BadgeColor({ color, roundEdge }) {

@@ -1,5 +1,4 @@
-import React from "react";
-import BadgeColor from "./BadgeColor-Component";
+import BadgeColor from "./BadgeColor.component";
 
 export default function Badge({ roundEdge }) {
   const colors = [

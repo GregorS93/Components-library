@@ -1,13 +1,13 @@
 .toast {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.25rem;
+    right: 1.25rem;
     display: flex;
-    gap: 15px;
+    gap: 0.9rem;
     align-items: flex-start;
     width: 50%;
-    margin-left: 10px;
-    padding: 1em;
+    margin-left: 0.6rem;
+    padding: 1rem;
     border-radius: 10px;
     transition: transform 0.3s ease;
     transform: scale()

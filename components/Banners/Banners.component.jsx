@@ -1,5 +1,4 @@
-import React from "react";
-import Banner from "./Banner--Component";
+import Banner from "./Banner.component";
 
 export default function Banners() {
   return (

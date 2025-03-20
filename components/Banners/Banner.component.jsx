@@ -1,5 +1,3 @@
-import React from "react";
-import Banners from "./Banners--Component";
 import clsx from "clsx";
 
 export default function Banner({ title, text, status, icons }) {

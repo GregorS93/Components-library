@@ -1,12 +1,11 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import Badge from "./components/Badge/Badge-Component";
-import Banners from "./components/Banners/Banners--Component";
-import Card from "./components/Card/Card-Component";
-import TestimonialLogo from "./components/Testimonials/TestimonialLogo-Component";
-import TestimonialPicture from "./components/Testimonials/TestimonialPicture-Component";
-import Tooltip from "./components/Tooltip/Tooltip-Component";
-import Toasts from "./components/Toasts/Toasts-Component";
+import Badge from "./components/Badge/Badge.component";
+import Banners from "./components/Banners/Banners.component";
+import Card from "./components/Card/Card.component";
+import TestimonialLogo from "./components/Testimonials/TestimonialLogo.component";
+import TestimonialPicture from "./components/Testimonials/TestimonialPicture.component";
+import Tooltip from "./components/Tooltip/Tooltip.component";
+import Toasts from "./components/Toasts/Toasts.component";
 
 function App() {
   return (
