@@ -1,20 +1,15 @@
+import portrait from "./pictures/portrait.png";
+import portraitCropped from "./pictures/portrait-cropped.png";
+import quotation from "./pictures/dictate.png";
+
 export default function Testimonial() {
   return (
     <div className="withPicture">
-      <img
-        src="./components/Testimonials/pictures/portrait.png"
-        className="portrait"
-      />
+      <img src={portrait} className="portrait" />
       <div className="float-div">
-        <img
-          src="./components/Testimonials/pictures/portrait-cropped.png"
-          className="portrait-cropped"
-        />
-        <img
-          src="./components/Testimonials/pictures/dictate.png"
-          className="narekovaj"
-        />
-        <p className="p-picture">
+        <img src={portraitCropped} className="portrait-cropped" />
+        <img src={quotation} className="quotation" />
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita
           voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum
           sed rerum et corporis.

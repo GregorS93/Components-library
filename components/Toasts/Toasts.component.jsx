@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Toast from "./Toast.component";
+import icons from "./icons/success.png";
 
 export default function Toasts() {
   const [showToast, setShowToast] = useState(false);
@@ -18,7 +19,7 @@ export default function Toasts() {
           title="Congratulations!"
           text="Your work has been saved."
           status="Success"
-          icons="./components/Toasts/icons/success.png"
+          icons={icons}
         />
       )}
       <br />

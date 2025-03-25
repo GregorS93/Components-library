@@ -124,12 +124,12 @@
     /* Big picture only */
     
     body {
-        padding: 0;
+        padding: 1rem;
         margin: 0;
     }
     
     .withPicture {
-        width: 100%;
+        width: 90%;
         height: 25rem;
         background: #2545B8;
         flex-direction: row;
@@ -163,9 +163,10 @@
         gap: 0.3rem;
     }
     
-    .narekovaj {
-        margin: 0;
+    .quotation {
         margin-bottom: 1rem;
+        height: 2.5rem;
+        width: 3rem;
     }
     
     .name-div {

@@ -1,5 +1,8 @@
 import Banner from "./Banner.component";
 import successIcon from "./icons/success.png";
+import exclamationIcon from "./icons/exclamation.png";
+import xcircleIcon from "./icons/x-circle.png";
+import infoIcon from "./icons/info.png";
 
 export default function Banners() {
   return (
@@ -18,7 +21,7 @@ export default function Banners() {
         title="Attention"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum."
         status="Warning"
-        icons="./components/Banners/icons/exclamation.png"
+        icons={exclamationIcon}
       />
       <br />
       <br />
@@ -26,7 +29,7 @@ export default function Banners() {
         title="There is a problem with your application"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum."
         status="Error"
-        icons="./components/Banners/icons/x-circle.png"
+        icons={xcircleIcon}
       />
       <br />
       <br />
@@ -34,7 +37,7 @@ export default function Banners() {
         title="Update available"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum."
         status="Neutral"
-        icons="./components/Banners/icons/info.png"
+        icons={infoIcon}
       />
       <br />
       <br />

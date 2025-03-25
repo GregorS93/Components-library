@@ -1,7 +1,9 @@
+import logo from "./pictures/Logo.png";
+
 export default function TestimonialLogo() {
   return (
     <div className="testimonial">
-      <img src="./components/Testimonials/pictures/Logo.png" className="logo" />
+      <img src={logo} className="logo" />
       <p>
         “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita
         voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed
