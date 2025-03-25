@@ -1,5 +1,5 @@
 import Banner from "./Banner.component";
-import { successIcon } from "./icons/success.png";
+import successIcon from "./icons/success.png";
 
 export default function Banners() {
   return (
