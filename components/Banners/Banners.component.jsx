@@ -1,4 +1,5 @@
 import Banner from "./Banner.component";
+import { successIcon } from "./icons/success.png";
 
 export default function Banners() {
   return (
@@ -9,7 +10,7 @@ export default function Banners() {
         title="Congratulations!"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum."
         status="Success"
-        icons="./components/Banners/icons/success.png"
+        icons={successIcon}
       />
       <br />
       <br />
