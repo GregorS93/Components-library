@@ -59,9 +59,8 @@
     width: 100%;
 }
 
-.narekovaj {
-    align-self: flex-start;
-    margin: 1rem 0 1rem 1.5rem;
+.name-div {
+    font-weight: 800;
 }
 
 .span-picture {
@@ -77,6 +76,17 @@
     padding-bottom: 4rem;
     gap: 0.3rem;
 }
+
+.quotation,
+.float-div > p {
+    margin-left: 1.5rem;
+}
+
+.float-div > p {
+    margin-bottom:-0.5rem;
+    padding-top: 1rem;
+}
+
 
 /* Media queries */
 
@@ -140,6 +150,8 @@
     .float-div > p {
         font-size: 1.2rem;
         line-height: 1.4;
+        margin: 0;
+        padding-top: 2rem;
     }
     
     .portrait {
@@ -164,6 +176,7 @@
     }
     
     .quotation {
+        margin-left: 0;
         margin-bottom: 1rem;
         height: 2.5rem;
         width: 3rem;
