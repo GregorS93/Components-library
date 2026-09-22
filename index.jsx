@@ -10,9 +10,12 @@ import Toasts from "./components/Toasts/Toasts.component";
 function App() {
   return (
     <>
-      <h1>Components library</h1>
-      <br />
-      <br />
+      <header className="page-header">
+        <h1>Favorite components, gathered in one place</h1>
+        <p className="page-subtitle">
+          A small library of React building blocks I actually use.
+        </p>
+      </header>
       <h2>Badge component:</h2>
       <div className="badges">
         <Badge />
