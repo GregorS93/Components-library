@@ -10,6 +10,7 @@ import Buttons from "./components/Button/Buttons.component";
 import Toggles from "./components/Toggle/Toggles.component";
 import Choices from "./components/Choice/Choices.component";
 import Inputs from "./components/Input/Inputs.component";
+import Selects from "./components/Select/Selects.component";
 
 function SectionHeading({ index, title }) {
   return (
@@ -116,6 +117,13 @@ function App() {
         <div className="section-inner">
           <SectionHeading index="10" title="Inputs" />
           <Inputs />
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="11" title="Selects" />
+          <Selects />
         </div>
       </section>
     </>
