@@ -8,6 +8,7 @@ import Tooltip from "./components/Tooltip/Tooltip.component";
 import Toasts from "./components/Toasts/Toasts.component";
 import Buttons from "./components/Button/Buttons.component";
 import Toggles from "./components/Toggle/Toggles.component";
+import Choices from "./components/Choice/Choices.component";
 
 function SectionHeading({ index, title }) {
   return (
@@ -100,6 +101,13 @@ function App() {
         <div className="section-inner">
           <SectionHeading index="08" title="Toggles" />
           <Toggles />
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="09" title="Choices" />
+          <Choices />
         </div>
       </section>
     </>
