@@ -1,0 +1,132 @@
+.inputs-overlay {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #eceef2;
+    border-radius: 1.1rem;
+    box-shadow:
+        0 1px 2px rgba(17, 24, 39, 0.04),
+        0 22px 48px -28px rgba(17, 24, 39, 0.22);
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+    padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.input-block + .input-block {
+    border-top: 1px solid #f3f4f6;
+}
+
+.input-block-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.input-block-label {
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #9ca3af;
+}
+
+.input-block-hint {
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.input-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field-label {
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.field-control {
+    appearance: none;
+    width: 100%;
+    min-height: 2.65rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.8rem;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04);
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #111827;
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.field-control::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.field-control:hover {
+    border-color: #d1d5db;
+}
+
+.field-control:focus {
+    outline: none;
+    border-color: #7c6bf0;
+    box-shadow: 0 0 0 3px rgba(124, 107, 240, 0.18);
+}
+
+.field-textarea {
+    min-height: 6.25rem;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.field-message {
+    margin: 0;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #6b7280;
+}
+
+.field.is-error .field-control {
+    border-color: #ef4444;
+}
+
+.field.is-error .field-control:hover,
+.field.is-error .field-control:focus {
+    border-color: #dc2626;
+}
+
+.field.is-error .field-control:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.16);
+}
+
+.field-message.is-error {
+    color: #b91c1c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field-control {
+        transition: none;
+    }
+}
