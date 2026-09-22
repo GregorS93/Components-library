@@ -1,4 +1,6 @@
+import { useRef, useState } from "react";
 import ReactDOM from "react-dom/client";
+import clsx from "clsx";
 import Badge from "./components/Badge/Badge.component";
 import Banners from "./components/Banners/Banners.component";
 import Card from "./components/Card/Card.component";
@@ -13,16 +15,164 @@ import Inputs from "./components/Input/Inputs.component";
 import Selects from "./components/Select/Selects.component";
 import Searches from "./components/Search/Searches.component";
 
+const SECTIONS = [
+  {
+    id: "badges",
+    index: "01",
+    title: "Badges",
+    render: () => (
+      <div className="badges">
+        <Badge />
+        <br />
+        <Badge roundEdge />
+      </div>
+    ),
+  },
+  {
+    id: "banners",
+    index: "02",
+    title: "Banners",
+    render: () => <Banners />,
+  },
+  {
+    id: "cards",
+    index: "03",
+    title: "Cards",
+    render: () => (
+      <div className="card-background">
+        <Card />
+      </div>
+    ),
+  },
+  {
+    id: "testimonials",
+    index: "04",
+    title: "Testimonials",
+    wide: true,
+    render: () => (
+      <>
+        <TestimonialLogo />
+        <br />
+        <br />
+        <TestimonialPicture />
+      </>
+    ),
+  },
+  {
+    id: "tooltips",
+    index: "05",
+    title: "Tooltips",
+    render: () => (
+      <>
+        <Tooltip style="light" />
+        <br />
+        <br />
+        <Tooltip style="dark" />
+      </>
+    ),
+  },
+  {
+    id: "toasts",
+    index: "06",
+    title: "Toasts",
+    render: () => <Toasts />,
+  },
+  {
+    id: "buttons",
+    index: "07",
+    title: "Buttons",
+    render: () => <Buttons />,
+  },
+  {
+    id: "toggles",
+    index: "08",
+    title: "Toggles",
+    render: () => <Toggles />,
+  },
+  {
+    id: "choices",
+    index: "09",
+    title: "Choices",
+    render: () => <Choices />,
+  },
+  {
+    id: "inputs",
+    index: "10",
+    title: "Inputs",
+    render: () => <Inputs />,
+  },
+  {
+    id: "selects",
+    index: "11",
+    title: "Selects",
+    render: () => <Selects />,
+  },
+  {
+    id: "search",
+    index: "12",
+    title: "Search",
+    render: () => <Searches />,
+  },
+];
+
 function SectionHeading({ index, title }) {
   return (
-    <h2 className="section-heading">
+    <h2 className="section-heading" id="component-panel-heading">
       <span className="section-index">{index}</span>
       <span className="section-title">{title}</span>
     </h2>
   );
 }
 
+function ComponentNav({ sections, activeId, onChange }) {
+  const optionRefs = useRef([]);
+
+  function select(id, index) {
+    onChange(id);
+    optionRefs.current[index]?.focus();
+  }
+
+  function handleKeyDown(event, index) {
+    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+
+    event.preventDefault();
+    const offset = event.key === "ArrowRight" ? 1 : -1;
+    const nextIndex = (index + offset + sections.length) % sections.length;
+    select(sections[nextIndex].id, nextIndex);
+  }
+
+  return (
+    <div className="component-nav" role="tablist" aria-label="Components">
+      {sections.map((section, index) => {
+        const selected = section.id === activeId;
+
+        return (
+          <button
+            key={section.id}
+            type="button"
+            role="tab"
+            aria-selected={selected}
+            aria-controls="component-panel"
+            tabIndex={selected ? 0 : -1}
+            className={clsx("component-nav-item", selected && "is-selected")}
+            ref={(node) => {
+              optionRefs.current[index] = node;
+            }}
+            onClick={() => select(section.id, index)}
+            onKeyDown={(event) => handleKeyDown(event, index)}
+          >
+            {section.title}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function App() {
+  const [activeId, setActiveId] = useState(SECTIONS[0].id);
+  const active = SECTIONS.find((section) => section.id === activeId) ?? SECTIONS[0];
+
   return (
     <>
       <header className="page-header">
@@ -35,104 +185,37 @@ function App() {
         <p className="page-subtitle">
           A small library of React building blocks I actually use.
         </p>
+        <ComponentNav
+          sections={SECTIONS}
+          activeId={active.id}
+          onChange={setActiveId}
+        />
       </header>
 
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="01" title="Badges" />
-          <div className="badges">
-            <Badge />
-            <br />
-            <Badge roundEdge />
+      <section
+        className="component-section"
+        id="component-panel"
+        role="tabpanel"
+        aria-labelledby="component-panel-heading"
+      >
+        {active.wide ? (
+          <>
+            <div className="section-inner">
+              <SectionHeading
+                index={active.index}
+                title={active.title}
+              />
+            </div>
+            <div className="section-inner section-inner-wide">
+              {active.render()}
+            </div>
+          </>
+        ) : (
+          <div className="section-inner">
+            <SectionHeading index={active.index} title={active.title} />
+            {active.render()}
           </div>
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="02" title="Banners" />
-          <Banners />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="03" title="Cards" />
-          <div className="card-background">
-            <Card />
-          </div>
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="04" title="Testimonials" />
-        </div>
-        <div className="section-inner section-inner-wide">
-          <TestimonialLogo />
-          <br />
-          <br />
-          <TestimonialPicture />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="05" title="Tooltips" />
-          <Tooltip style="light" />
-          <br />
-          <br />
-          <Tooltip style="dark" />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="06" title="Toasts" />
-          <Toasts />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="07" title="Buttons" />
-          <Buttons />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="08" title="Toggles" />
-          <Toggles />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="09" title="Choices" />
-          <Choices />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="10" title="Inputs" />
-          <Inputs />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="11" title="Selects" />
-          <Selects />
-        </div>
-      </section>
-
-      <section className="component-section">
-        <div className="section-inner">
-          <SectionHeading index="12" title="Search" />
-          <Searches />
-        </div>
+        )}
       </section>
     </>
   );
