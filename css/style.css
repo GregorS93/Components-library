@@ -5,32 +5,114 @@
 body {
     height: 100%;
     margin: 0;
-    padding: 1.25rem;
+    padding: 2rem clamp(1.75rem, 4vw, 3.5rem) 4.5rem;
     display: flex;
     justify-content: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     background-color: #EFEFEF;
 }
 
+#root {
+    width: min(100%, 75rem);
+}
+
 .page-header {
-    max-width: 42rem;
-    margin: 0 auto 3.5rem;
+    max-width: 38rem;
+    margin: 0.5rem auto 4.25rem;
     text-align: center;
+}
+
+.page-eyebrow {
+    margin: 0 0 0.75rem;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7C6BF0;
 }
 
 .page-header h1 {
     margin: 0;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-family: Outfit, Inter, sans-serif;
+    font-size: clamp(1.85rem, 4vw, 2.6rem);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
     color: #111827;
 }
 
+.page-header h1 em {
+    font-family: Fraunces, Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-optical-sizing: auto;
+}
+
 .page-subtitle {
-    margin: 0.85rem 0 0;
-    font-size: 1.05rem;
-    line-height: 1.5;
+    margin: 1.1rem 0 0;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.55;
     color: #6B7280;
+}
+
+.page-subtitle::after {
+    content: "";
+    display: block;
+    width: 2.15rem;
+    height: 2px;
+    margin: 1.25rem auto 0;
+    background: #7C6BF0;
+    border-radius: 999px;
+}
+
+.component-section {
+    margin-bottom: 3.75rem;
+}
+
+.section-inner {
+    width: min(100%, 46rem);
+    margin-inline: auto;
+}
+
+.section-inner-wide {
+    width: min(100%, 72rem);
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    margin: 0 0 1.15rem;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1F2937;
+}
+
+.section-index {
+    color: #7C6BF0;
+    letter-spacing: 0.08em;
+    font-variant-numeric: tabular-nums;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.35rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.35rem;
+    height: 3px;
+    background: #7C6BF0;
+    border-radius: 999px;
 }
 
 .star {

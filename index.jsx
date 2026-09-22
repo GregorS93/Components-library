@@ -7,54 +7,85 @@ import TestimonialPicture from "./components/Testimonials/TestimonialPicture.com
 import Tooltip from "./components/Tooltip/Tooltip.component";
 import Toasts from "./components/Toasts/Toasts.component";
 
+function SectionHeading({ index, title }) {
+  return (
+    <h2 className="section-heading">
+      <span className="section-index">{index}</span>
+      <span className="section-title">{title}</span>
+    </h2>
+  );
+}
+
 function App() {
   return (
     <>
       <header className="page-header">
-        <h1>Favorite components, gathered in one place</h1>
+        <p className="page-eyebrow">Component library</p>
+        <h1>
+          Favorite components,
+          <br />
+          <em>gathered in</em> one place
+        </h1>
         <p className="page-subtitle">
           A small library of React building blocks I actually use.
         </p>
       </header>
-      <h2>Badge component:</h2>
-      <div className="badges">
-        <Badge />
-        <br />
-        <Badge roundEdge />
-      </div>
-      <br />
-      <br />
-      <br />
-      <h2>Banners Components:</h2>
-      <Banners />
-      <br />
-      <h2>Card component:</h2>
-      <div className="card-background">
-        <Card />
-      </div>
-      <br />
-      <br />
-      <h2>Testimonial components:</h2>
-      <TestimonialLogo />
-      <br />
-      <br />
-      <TestimonialPicture />
-      <br />
-      <br />
-      <br />
-      <h2>Tooltip components:</h2>
-      <Tooltip style="light" />
-      <br />
-      <br />
-      <Tooltip style="dark" />
-      <br />
-      <br />
-      <br />
-      <h2>Toasts component:</h2>
-      <Toasts />
-      <br />
-      <br />
-      <br />
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="01" title="Badges" />
+          <div className="badges">
+            <Badge />
+            <br />
+            <Badge roundEdge />
+          </div>
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="02" title="Banners" />
+          <Banners />
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="03" title="Cards" />
+          <div className="card-background">
+            <Card />
+          </div>
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="04" title="Testimonials" />
+        </div>
+        <div className="section-inner section-inner-wide">
+          <TestimonialLogo />
+          <br />
+          <br />
+          <TestimonialPicture />
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="05" title="Tooltips" />
+          <Tooltip style="light" />
+          <br />
+          <br />
+          <Tooltip style="dark" />
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="06" title="Toasts" />
+          <Toasts />
+        </div>
+      </section>
     </>
   );
 }
