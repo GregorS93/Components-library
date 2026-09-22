@@ -6,6 +6,7 @@ import TestimonialLogo from "./components/Testimonials/TestimonialLogo.component
 import TestimonialPicture from "./components/Testimonials/TestimonialPicture.component";
 import Tooltip from "./components/Tooltip/Tooltip.component";
 import Toasts from "./components/Toasts/Toasts.component";
+import Buttons from "./components/Button/Buttons.component";
 
 function SectionHeading({ index, title }) {
   return (
@@ -84,6 +85,13 @@ function App() {
         <div className="section-inner">
           <SectionHeading index="06" title="Toasts" />
           <Toasts />
+        </div>
+      </section>
+
+      <section className="component-section">
+        <div className="section-inner">
+          <SectionHeading index="07" title="Buttons" />
+          <Buttons />
         </div>
       </section>
     </>
