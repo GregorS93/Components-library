@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Components library">
+  <!-- Solid tile so the mark stays visible on light and dark browser chrome -->
+  <rect width="32" height="32" rx="8" fill="#3F75FE"/>
+  <path fill="#FFFFFF" d="M16 6.4 26.2 12.2 16 18 5.8 12.2Z"/>
+  <path fill="#C5D4FF" d="M5.8 12.2 16 18v8.6L5.8 20.8Z"/>
+  <path fill="#8BA4F8" d="M26.2 12.2 16 18v8.6l10.2-5.8Z"/>
+</svg>
