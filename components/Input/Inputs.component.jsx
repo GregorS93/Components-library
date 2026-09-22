@@ -1,5 +1,52 @@
+import { useState } from "react";
 import TextInput from "./TextInput.component";
 import Textarea from "./Textarea.component";
+
+function isValidUrl(value) {
+  const trimmed = value.trim();
+  if (!trimmed) return false;
+
+  try {
+    const withProtocol = /^https?:\/\//i.test(trimmed)
+      ? trimmed
+      : `https://${trimmed}`;
+    const url = new URL(withProtocol);
+    if (url.username || url.password) return false;
+    return /^([a-z0-9-]+\.)+[a-z]{2,}$/i.test(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
+function WebsiteInput() {
+  const [value, setValue] = useState("notaurl");
+
+  return (
+    <TextInput
+      label="Website"
+      type="url"
+      name="library-website"
+      value={value}
+      onChange={(event) => setValue(event.target.value)}
+      error={isValidUrl(value) ? undefined : "Enter a valid URL"}
+      autoComplete="off"
+    />
+  );
+}
+
+function BioTextarea() {
+  const [value, setValue] = useState("Too short");
+
+  return (
+    <Textarea
+      label="Bio"
+      name="library-bio"
+      value={value}
+      onChange={(event) => setValue(event.target.value)}
+      error={value.trim().length > 20 ? undefined : "Add at least 20 characters"}
+    />
+  );
+}
 
 export default function Inputs() {
   return (
@@ -24,14 +71,7 @@ export default function Inputs() {
             helper="We'll send a confirmation"
             autoComplete="off"
           />
-          <TextInput
-            label="Website"
-            type="url"
-            name="library-website"
-            defaultValue="notaurl"
-            error="Enter a valid URL"
-            autoComplete="off"
-          />
+          <WebsiteInput />
         </div>
       </div>
 
@@ -47,12 +87,7 @@ export default function Inputs() {
             placeholder="What should we know?"
             helper="Keep it under 240 characters"
           />
-          <Textarea
-            label="Bio"
-            name="library-bio"
-            defaultValue="Too short"
-            error="Add at least 20 characters"
-          />
+          <BioTextarea />
         </div>
       </div>
     </div>
