@@ -17,6 +17,8 @@ import Searches from "./components/Search/Searches.component";
 import Modals from "./components/Modal/Modals.component";
 import Drawers from "./components/Drawer/Drawers.component";
 import Popovers from "./components/Popover/Popovers.component";
+import Accordions from "./components/Accordion/Accordions.component";
+import "./css/accordion.css";
 
 const SECTIONS = [
   {
@@ -133,6 +135,12 @@ const SECTIONS = [
     index: "15",
     title: "Popovers",
     render: () => <Popovers />,
+  },
+  {
+    id: "accordions",
+    index: "16",
+    title: "Accordions",
+    render: () => <Accordions />,
   },
 ];
 
