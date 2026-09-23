@@ -3,12 +3,12 @@ import { BsCloudUpload } from "react-icons/bs";
 const Icon = ({ icon, backgroundColor }) => {
   const iconStyle = {
     backgroundColor,
-    height: "48px",
-    width: "48px",
-    borderRadius: "8px",
+    height: "3rem",
+    width: "3rem",
+    borderRadius: "0.5rem",
     display: "flex",
     justifyContent: "center",
-    marginTop: "-25px",
+    marginTop: "-1.5625rem",
     cursor: "pointer",
   };
 
