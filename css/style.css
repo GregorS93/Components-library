@@ -16,6 +16,14 @@ body {
     width: min(100%, 75rem);
 }
 
+.page-logo {
+    display: block;
+    height: 1.05rem;
+    width: auto;
+    margin: 0 0 1.15rem;
+    opacity: 0.72;
+}
+
 .page-header {
     max-width: 46rem;
     margin: 0.5rem auto 2.75rem;

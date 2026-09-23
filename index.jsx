@@ -205,6 +205,7 @@ function App() {
 
   return (
     <>
+      <img className="page-logo" src="/devsenko.png" alt="devsenko" />
       <header className="page-header">
         <p className="page-eyebrow">Component library</p>
         <h1>
