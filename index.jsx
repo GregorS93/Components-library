@@ -27,10 +27,10 @@ import "./css/toast.css";
 
 const SECTIONS = [
   {
-    id: "buttons",
+    id: "toasts",
     index: "01",
-    title: "Buttons",
-    render: () => <Buttons />,
+    title: "Toasts",
+    render: () => <Toasts />,
   },
   {
     id: "banners",
@@ -66,10 +66,10 @@ const SECTIONS = [
     render: () => <Tooltips />,
   },
   {
-    id: "toasts",
+    id: "buttons",
     index: "06",
-    title: "Toasts",
-    render: () => <Toasts />,
+    title: "Buttons",
+    render: () => <Buttons />,
   },
   {
     id: "badges",
@@ -199,28 +199,45 @@ function ComponentNav({ sections, activeId, onChange }) {
   );
 }
 
+function PageFooter({ count }) {
+  return (
+    <footer className="page-footer">
+      <img src="/devsenko.png" alt="devsenko" />
+      <p>
+        {count} components
+        <span aria-hidden="true">·</span>
+        React
+        <span aria-hidden="true">·</span>
+        {new Date().getFullYear()}
+      </p>
+    </footer>
+  );
+}
+
 function App() {
   const [activeId, setActiveId] = useState(SECTIONS[0].id);
   const active = SECTIONS.find((section) => section.id === activeId) ?? SECTIONS[0];
 
   return (
     <>
-      <img className="page-logo" src="/devsenko.png" alt="devsenko" />
       <header className="page-header">
-        <p className="page-eyebrow">Component library</p>
-        <h1>
-          Favorite components,
-          <br />
-          <em>gathered in</em> one place
-        </h1>
-        <p className="page-subtitle">
-          A small library of React building blocks I actually use.
-        </p>
-        <ComponentNav
-          sections={SECTIONS}
-          activeId={active.id}
-          onChange={setActiveId}
-        />
+        <img className="page-logo" src="/devsenko.png" alt="devsenko" />
+        <div className="page-intro">
+          <p className="page-eyebrow">Component library</p>
+          <h1>
+            Favorite components,
+            <br />
+            <em>gathered in</em> one place
+          </h1>
+          <p className="page-subtitle">
+            A small library of React building blocks I actually use.
+          </p>
+          <ComponentNav
+            sections={SECTIONS}
+            activeId={active.id}
+            onChange={setActiveId}
+          />
+        </div>
       </header>
 
       <section
@@ -248,6 +265,8 @@ function App() {
           </div>
         )}
       </section>
+
+      <PageFooter count={SECTIONS.length} />
     </>
   );
 }
