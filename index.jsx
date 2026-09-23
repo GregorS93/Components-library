@@ -23,6 +23,7 @@ import BreadcrumbsExamples from "./components/Breadcrumbs/BreadcrumbsExamples.co
 import "./css/accordion.css";
 import "./css/tabs.css";
 import "./css/breadcrumbs.css";
+import "./css/toast.css";
 
 const SECTIONS = [
   {
