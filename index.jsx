@@ -6,7 +6,7 @@ import Banners from "./components/Banners/Banners.component";
 import Cards from "./components/Card/Cards.component";
 import TestimonialLogo from "./components/Testimonials/TestimonialLogo.component";
 import TestimonialPicture from "./components/Testimonials/TestimonialPicture.component";
-import Tooltip from "./components/Tooltip/Tooltip.component";
+import Tooltips from "./components/Tooltip/Tooltips.component";
 import Toasts from "./components/Toasts/Toasts.component";
 import Buttons from "./components/Button/Buttons.component";
 import Toggles from "./components/Toggle/Toggles.component";
@@ -62,14 +62,8 @@ const SECTIONS = [
     id: "tooltips",
     index: "05",
     title: "Tooltips",
-    render: () => (
-      <>
-        <Tooltip style="light" />
-        <br />
-        <br />
-        <Tooltip style="dark" />
-      </>
-    ),
+    wide: true,
+    render: () => <Tooltips />,
   },
   {
     id: "toasts",
