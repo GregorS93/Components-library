@@ -16,6 +16,7 @@ import Selects from "./components/Select/Selects.component";
 import Searches from "./components/Search/Searches.component";
 import Modals from "./components/Modal/Modals.component";
 import Drawers from "./components/Drawer/Drawers.component";
+import Popovers from "./components/Popover/Popovers.component";
 
 const SECTIONS = [
   {
@@ -126,6 +127,12 @@ const SECTIONS = [
     index: "14",
     title: "Drawers",
     render: () => <Drawers />,
+  },
+  {
+    id: "popovers",
+    index: "15",
+    title: "Popovers",
+    render: () => <Popovers />,
   },
 ];
 
