@@ -20,7 +20,11 @@ export default function Button({
         "btn",
         variant === "secondary" && "btn-secondary",
         variant === "danger" && "btn-danger",
-        variant !== "secondary" && variant !== "danger" && "btn-primary",
+        variant === "ghost" && "btn-ghost",
+        variant !== "secondary" &&
+          variant !== "danger" &&
+          variant !== "ghost" &&
+          "btn-primary",
         iconOnly && "btn-icon",
         loading && "btn-loading",
         className

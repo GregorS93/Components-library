@@ -1,7 +1,8 @@
 .buttons-showcase {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.35rem 1.25rem;
+    width: 100%;
     padding: 1.35rem 1.4rem 1.45rem;
     background: #ffffff;
     border: 1px solid #eceef2;
@@ -14,7 +15,13 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.55rem;
-    flex: 0 0 auto;
+    min-width: 0;
+}
+
+@media (max-width: 40rem) {
+    .buttons-showcase {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .button-example-label {
@@ -107,6 +114,25 @@ button.btn-danger:hover:not(:disabled) {
 
 button.btn-danger:active:not(:disabled) {
     box-shadow: 0 1px 2px rgba(220, 38, 38, 0.2);
+}
+
+button.btn-ghost {
+    color: #4b5563;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+button.btn-ghost:hover:not(:disabled) {
+    color: #111827;
+    background: #f3f4f6;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+button.btn-ghost:active:not(:disabled) {
+    background: #eceef2;
+    box-shadow: none;
 }
 
 button.btn-icon {

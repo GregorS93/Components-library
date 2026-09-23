@@ -37,6 +37,22 @@ const examples = [
       </Button>
     ),
   },
+  {
+    label: "Danger",
+    button: <Button variant="danger">Delete</Button>,
+  },
+  {
+    label: "Ghost",
+    button: <Button variant="ghost">Skip</Button>,
+  },
+  {
+    label: "With icon",
+    button: (
+      <Button variant="primary" icon={<FiPlus aria-hidden="true" />}>
+        Create
+      </Button>
+    ),
+  },
 ];
 
 export default function Buttons() {
