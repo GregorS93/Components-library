@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import clsx from "clsx";
 import Badges from "./components/Badge/Badges.component";
 import Banners from "./components/Banners/Banners.component";
-import Card from "./components/Card/Card.component";
+import Cards from "./components/Card/Cards.component";
 import TestimonialLogo from "./components/Testimonials/TestimonialLogo.component";
 import TestimonialPicture from "./components/Testimonials/TestimonialPicture.component";
 import Tooltip from "./components/Tooltip/Tooltip.component";
@@ -41,11 +41,7 @@ const SECTIONS = [
     id: "cards",
     index: "03",
     title: "Cards",
-    render: () => (
-      <div className="card-background">
-        <Card />
-      </div>
-    ),
+    render: () => <Cards />,
   },
   {
     id: "testimonials",
