@@ -19,8 +19,10 @@ import Drawers from "./components/Drawer/Drawers.component";
 import Popovers from "./components/Popover/Popovers.component";
 import Accordions from "./components/Accordion/Accordions.component";
 import TabsExamples from "./components/Tabs/TabsExamples.component";
+import BreadcrumbsExamples from "./components/Breadcrumbs/BreadcrumbsExamples.component";
 import "./css/accordion.css";
 import "./css/tabs.css";
+import "./css/breadcrumbs.css";
 
 const SECTIONS = [
   {
@@ -149,6 +151,12 @@ const SECTIONS = [
     index: "17",
     title: "Tabs",
     render: () => <TabsExamples />,
+  },
+  {
+    id: "breadcrumbs",
+    index: "18",
+    title: "Breadcrumbs",
+    render: () => <BreadcrumbsExamples />,
   },
 ];
 
