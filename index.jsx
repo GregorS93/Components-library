@@ -18,7 +18,9 @@ import Modals from "./components/Modal/Modals.component";
 import Drawers from "./components/Drawer/Drawers.component";
 import Popovers from "./components/Popover/Popovers.component";
 import Accordions from "./components/Accordion/Accordions.component";
+import TabsExamples from "./components/Tabs/TabsExamples.component";
 import "./css/accordion.css";
+import "./css/tabs.css";
 
 const SECTIONS = [
   {
@@ -141,6 +143,12 @@ const SECTIONS = [
     index: "16",
     title: "Accordions",
     render: () => <Accordions />,
+  },
+  {
+    id: "tabs",
+    index: "17",
+    title: "Tabs",
+    render: () => <TabsExamples />,
   },
 ];
 
