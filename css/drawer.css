@@ -1,0 +1,251 @@
+.drawers-overlay {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #eceef2;
+    border-radius: 1.1rem;
+    box-shadow:
+        0 1px 2px rgba(17, 24, 39, 0.04),
+        0 22px 48px -28px rgba(17, 24, 39, 0.22);
+}
+
+.drawer-example {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1.1rem 1.25rem 1.2rem;
+}
+
+.drawer-example + .drawer-example {
+    border-top: 1px solid #f3f4f6;
+}
+
+.drawer-example-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.drawer-example-label {
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #9ca3af;
+}
+
+.drawer-example-hint {
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    background: rgba(17, 24, 39, 0.45);
+    backdrop-filter: blur(6px);
+    animation: drawer-backdrop-in 0.22s ease;
+}
+
+.drawer-backdrop-right {
+    justify-content: flex-end;
+}
+
+.drawer-backdrop-left {
+    justify-content: flex-start;
+}
+
+.drawer-panel {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 24.5rem);
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 24px 48px -18px rgba(17, 24, 39, 0.35);
+}
+
+.drawer-panel-right {
+    border-left: 1px solid #eceef2;
+    animation: drawer-in-right 0.28s ease;
+}
+
+.drawer-panel-left {
+    border-right: 1px solid #eceef2;
+    animation: drawer-in-left 0.28s ease;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1.15rem 1.15rem 0.95rem 1.35rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.drawer-title {
+    margin: 0;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #111827;
+}
+
+button.drawer-close {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2.15rem;
+    height: 2.15rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.7rem;
+    background: transparent;
+    box-shadow: none;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+button.drawer-close svg {
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+button.drawer-close:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+button.drawer-close:focus {
+    outline: none;
+}
+
+button.drawer-close:focus-visible {
+    outline: 2px solid #7c6bf0;
+    outline-offset: 2px;
+}
+
+.drawer-body {
+    flex: 1 1 auto;
+    overflow: auto;
+    padding: 1.15rem 1.35rem 1.25rem;
+}
+
+.drawer-lead {
+    margin: 0 0 1.05rem;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #6b7280;
+}
+
+.drawer-meta {
+    margin: 0;
+    border: 1px solid #f3f4f6;
+    border-radius: 0.9rem;
+    overflow: hidden;
+}
+
+.drawer-meta > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 0.95rem;
+}
+
+.drawer-meta > div + div {
+    border-top: 1px solid #f3f4f6;
+}
+
+.drawer-meta dt {
+    margin: 0;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #9ca3af;
+}
+
+.drawer-meta dd {
+    margin: 0;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.drawer-filters {
+    overflow: hidden;
+    border: 1px solid #f3f4f6;
+    border-radius: 0.9rem;
+}
+
+.drawer-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 0.95rem;
+    font-family: Outfit, Inter, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.drawer-filter + .drawer-filter {
+    border-top: 1px solid #f3f4f6;
+}
+
+.drawer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    padding: 1rem 1.35rem 1.2rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+@keyframes drawer-backdrop-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drawer-in-right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes drawer-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .drawer-backdrop,
+    .drawer-panel-right,
+    .drawer-panel-left {
+        animation: none;
+    }
+}

@@ -14,6 +14,8 @@ import Choices from "./components/Choice/Choices.component";
 import Inputs from "./components/Input/Inputs.component";
 import Selects from "./components/Select/Selects.component";
 import Searches from "./components/Search/Searches.component";
+import Modals from "./components/Modal/Modals.component";
+import Drawers from "./components/Drawer/Drawers.component";
 
 const SECTIONS = [
   {
@@ -112,6 +114,18 @@ const SECTIONS = [
     index: "12",
     title: "Search",
     render: () => <Searches />,
+  },
+  {
+    id: "modals",
+    index: "13",
+    title: "Modals",
+    render: () => <Modals />,
+  },
+  {
+    id: "drawers",
+    index: "14",
+    title: "Drawers",
+    render: () => <Drawers />,
   },
 ];
 

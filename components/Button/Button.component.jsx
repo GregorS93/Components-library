@@ -18,7 +18,9 @@ export default function Button({
       type={type}
       className={clsx(
         "btn",
-        variant === "secondary" ? "btn-secondary" : "btn-primary",
+        variant === "secondary" && "btn-secondary",
+        variant === "danger" && "btn-danger",
+        variant !== "secondary" && variant !== "danger" && "btn-primary",
         iconOnly && "btn-icon",
         loading && "btn-loading",
         className
