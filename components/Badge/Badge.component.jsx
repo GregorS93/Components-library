@@ -1,17 +1,22 @@
-import BadgeColor from "./BadgeColor.component";
+import clsx from "clsx";
+import "../../css/badge.css";
 
-export default function Badge({ roundEdge }) {
-  const colors = [
-    "green",
-    "blue",
-    "grey",
-    "red",
-    "yellow",
-    "indigo",
-    "purple",
-    "pink",
-  ];
-  const randomColor = Math.floor(Math.random() * colors.length);
-
-  return <BadgeColor color={colors[randomColor]} roundEdge={roundEdge} />;
+export default function Badge({
+  children = "Badge",
+  color = "grey",
+  round = false,
+  className,
+}) {
+  return (
+    <span
+      className={clsx(
+        "badge",
+        `badge-${color}`,
+        round && "badge-round",
+        className
+      )}
+    >
+      {children}
+    </span>
+  );
 }

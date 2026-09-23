@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import ReactDOM from "react-dom/client";
 import clsx from "clsx";
-import Badge from "./components/Badge/Badge.component";
+import Badges from "./components/Badge/Badges.component";
 import Banners from "./components/Banners/Banners.component";
 import Card from "./components/Card/Card.component";
 import TestimonialLogo from "./components/Testimonials/TestimonialLogo.component";
@@ -26,16 +26,10 @@ import "./css/breadcrumbs.css";
 
 const SECTIONS = [
   {
-    id: "badges",
+    id: "buttons",
     index: "01",
-    title: "Badges",
-    render: () => (
-      <div className="badges">
-        <Badge />
-        <br />
-        <Badge roundEdge />
-      </div>
-    ),
+    title: "Buttons",
+    render: () => <Buttons />,
   },
   {
     id: "banners",
@@ -87,10 +81,10 @@ const SECTIONS = [
     render: () => <Toasts />,
   },
   {
-    id: "buttons",
+    id: "badges",
     index: "07",
-    title: "Buttons",
-    render: () => <Buttons />,
+    title: "Badges",
+    render: () => <Badges />,
   },
   {
     id: "toggles",
